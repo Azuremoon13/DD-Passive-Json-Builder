@@ -2,11 +2,19 @@ import customtkinter as ctk
 import json
 import pyperclip
 import requests
+import ctypes
+import os
+
+
 
 class JSONBuilder:
 	def __init__(self, root):
 		self.root = root
 		self.root.title("DD Passive Production JSON Builder")
+		if os.path.exists("dino_depot_mascot_icon.ico"):
+			self.root.iconbitmap("dino_depot_mascot_icon.ico")
+			if os.name == "nt":
+				ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("DD_PP_Builder")
 		self.root.geometry("1900x1200")
 		
 		self.data_entries = []
