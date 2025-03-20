@@ -4,15 +4,16 @@ import pyperclip
 import requests
 import ctypes
 import os
-
+import sys
 
 
 class JSONBuilder:
 	def __init__(self, root):
 		self.root = root
 		self.root.title("DD Passive Production JSON Builder")
-		if os.path.exists("dino_depot_mascot_icon.ico"):
-			self.root.iconbitmap("dino_depot_mascot_icon.ico")
+		icon_path = self.get_resource_path("dino_depot_mascot_icon.ico")
+		if os.path.exists(icon_path):
+			self.root.iconbitmap(icon_path)
 			if os.name == "nt":
 				ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("DD_PP_Builder")
 		self.root.geometry("1900x1200")
@@ -64,6 +65,12 @@ class JSONBuilder:
 		
 		self.create_widgets()
 	
+	def get_resource_path(self, file_name):
+		if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+			return os.path.join(sys._MEIPASS, file_name)
+		else:
+			return os.path.join(os.path.abspath(os.getcwd()), file_name)
+
 	def create_widgets(self):
 		def on_combobox_click(event):
 			event.widget.delete(0, "end")
