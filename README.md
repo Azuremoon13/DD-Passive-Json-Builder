@@ -1,6 +1,6 @@
 # DD Passive JSON Builder
 
-This project is a JSON builder for DD Passive using `customtkinter` for the UI. Follow the steps below to download, install dependencies, and run the application.
+This project is a JSON builder for DD Passive using `customtkinter` for the UI. Follow the steps below to download, install dependencies, and run the application, cause who trusts some random exe off the internet..
 
 ## Prerequisites
 
