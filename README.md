@@ -1,6 +1,6 @@
 # DD Passive JSON Builder
 
-This project is a JSON builder for DD Passive using `customtkinter` for the UI. Follow the steps below to download, install dependencies, and run the application, cause who trusts some random exe off the internet..
+This project is a JSON builder for [DinoDepot](https://www.curseforge.com/ark-survival-ascended/mods/dino-depot) Passive Production using `customtkinter` for the UI. Follow the steps below to download, install dependencies, and run the application, cause who trusts some random exe off the internet..
 
 ## Prerequisites
 
