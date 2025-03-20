@@ -3,6 +3,6 @@ Resource_List.py
 Dino.Depot.Mascot.icon.png
 JsonBuilder.py
 dino_depot_mascot_icon.ico
-.build
-.dist
+build/
+dist/
 JsonBuilder.spec
