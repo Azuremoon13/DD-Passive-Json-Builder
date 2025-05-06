@@ -242,7 +242,7 @@ class JSONBuilder:
 					"alternateSelectMode": self.consume_modes.index(self.text_boxes[8].get()) if self.text_boxes[8].get() else 0,
 					"alternateItemsChance": float(self.text_boxes[9].get()) if self.text_boxes[9].get() else 0.0,
 					"alternateItems": self.temp_alts[:],
-					"comsumesSelectMode": self.consume_modes.index(self.text_boxes[10].get()) if self.text_boxes[10].get() else 0,
+					"consumesSelectMode": self.consume_modes.index(self.text_boxes[10].get()) if self.text_boxes[10].get() else 0,
 					"consumesItemsChance": float(self.text_boxes[11].get()) if self.text_boxes[11].get() else 0.0,
 					"consumesItems": self.temp_consumes[:]
 				}
